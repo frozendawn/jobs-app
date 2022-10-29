@@ -15,7 +15,7 @@
 ## SETUP
 
 ### You will need to setup an elastic cluster
-[Download and follow the instructions to install local elasticsearch cluster]: https://www.elastic.co/downloads/elasticsearch
+[Download and follow the instructions to install local elasticsearch cluster](https://www.elastic.co/downloads/elasticsearch "Elasticsearch website download page")
 
 For cluster username and password I chose "username: elastic" "password: 123456"
 if you chose different ones you will just need to replace username and password with your own when you run the requests down below.
