@@ -7,6 +7,8 @@ import TypePin from "../public/type-pin.svg";
 import LandingPageSearch from "../components/LandingPageSearch/LandingPageSearch";
 
 export default function Home({ aggregationsData }) {
+
+  console.log("process.env.test", process.env.NEXT_PUBLIC_TEST)
   const [jobData, setJobData] = useState();
   return (
     <>

@@ -1,5 +1,5 @@
 export default async (req, res) => {
-  const elasticResponse = await fetch('http://localhost:9200/mapping_practice/_search', {
+  const elasticResponse = await fetch(`${process.env.NEXT_PUBLIC_ELASTICSEARCH_URL}/${process.env.NEXT_PUBLIC_JOBS_INDEX}/_search`, {
     method: "POST",
     headers: {
       "content-type": "application/json",

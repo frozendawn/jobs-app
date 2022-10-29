@@ -10,3 +10,93 @@
 ## Details page
 
 ![details-page](/public/readme/jobs-app-details.jpg)
+
+
+## SETUP
+
+### You will need to setup an elastic cluster
+[Download and follow the instructions to install local elasticsearch cluster]: https://www.elastic.co/downloads/elasticsearch
+
+For cluster username and password I chose "username: elastic" "password: 123456"
+if you chose different ones you will just need to replace username and password with your own when you run the requests down below.
+
+### First you will need to create the mapping for index
+
+### Create a json file containing the mapping
+```
+{
+  "mappings": {
+    "properties": {
+      "title": {
+        "type": "text",
+        "fields": {
+          "keyword": {
+            "type": "keyword"
+          }
+        }
+      },
+      "description:": {
+        "type": "text"
+      },
+      "job_category": {
+        "type": "keyword"
+      },
+      "job_type": {
+        "type": "keyword"
+      },
+      "location": {
+        "type": "keyword"
+      },
+      "responsibilities": {
+        "type": "text"
+      },
+      "requirements": {
+        "type": "text"
+      }
+    }
+  }
+}
+```
+
+### Run the following commands to add the index and mapping
+Linux/Mac
+curl -X PUT http://localhost:9200/mapping_practice/ /
+--header "Content-Type: application/json" /
+--user elastic:123456 /
+-d @mapping.json
+
+
+curl -X PUT http://localhost:9200/mapping_practice/ ^
+--header "Content-Type: application/json" ^
+--user elastic:123456 ^
+-d @mapping.json
+
+### To index jobs you can you the following curl commands (Make sure you create a json file (named job.json in my case) containing the job data before you run the request)
+
+This is an example of how the json file should look.
+```
+{
+  "title": "Test job",
+  "description": "Test description",
+  "job_type": "contract",
+  "location": "Gabrovo",
+  "responsibilities":["Array","of","responsibilities"],
+  "requirements": ["Array", "of","requirements"]
+}
+```
+
+### Linux/Mac
+```
+curl -X POST http://localhost:9200/mapping_practice/_doc /
+--header "Content-Type: application/json" /
+--user elastic:123456 /
+-d @job.json
+```
+
+### Windows
+```
+curl -X POST http://localhost:9200/mapping_practice/_doc ^
+--header "Content-Type: application/json" ^
+--user elastic:123456 ^
+-d @job.json
+```
