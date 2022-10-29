@@ -1,0 +1,54 @@
+.jobs-list {
+  margin: 0 auto;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  width: 50%;
+  padding: 0;
+}
+
+.jobs-list--item {
+  width: 100%;
+  border-bottom: 0.2rem solid #D3D3D3;
+}
+
+.job-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.job-description {
+  color: #505050;
+  font-size: 1.3rem;
+}
+
+.job-tags {
+  margin-top: 1rem;
+}
+
+.job-tags ul {
+  display: flex;
+  list-style: none;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+}
+
+.job-tags ul li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.icon-wrapper {
+  height: 2.4rem;
+  width: 2.4rem;
+}
+
+.icon-wrapper svg {
+  height: 100%;
+  width: 100%;
+}
+

@@ -1,0 +1,76 @@
+.container {
+  margin: 3rem auto;
+  padding: 2rem;
+  max-width: 100rem;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.heading {
+  color: #404041;
+  font-weight: 700;
+  font-size: 6rem;
+}
+
+.metadata {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+}
+
+.metadata-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.apply-button {
+  background-color: #e8b001;
+  border-radius: 0.3rem;
+  margin-top: 2rem;
+  padding: 1.5rem;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.description-wrapper {
+  border-bottom: 2px solid #d3d3d3;
+}
+
+.description {
+  color: #636d77;
+  font-size: 1.6rem;
+}
+
+.apply-button:hover {
+  background-color: #ffc309;
+}
+
+.responsibilities-wrapper,
+.requirements-wrapper {
+  color: #636d77;
+}
+
+.responsibilities-wrapper p,
+.requirements-wrapper p {
+  font-weight: 700;
+  font-size: 1.6rem;
+}
+
+.responsibilities-list--item,
+.requirements-list--item {
+  font-weight: 400;
+  font-size: 1.6rem;
+}
+
+.accordion-wrapper {
+  margin-bottom: 5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.accordion {
+}

@@ -1,0 +1,102 @@
+.header-wrapper {
+  max-width: 100%;
+  height: 15rem;
+  background-color: #fff;
+  color: #717374;
+  box-shadow: 0 2rem 2rem rgba(0, 0, 0, 0.15);
+  /* background-color: red; */
+}
+
+.header-content {
+  /* background-color: blue; */
+  max-width: 120rem;
+  padding: 2rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.contact-us {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.contact-us--item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.phone-icon,
+.email-icon {
+  width: 2rem;
+  height: 2rem;
+}
+
+.phone-icon ion-icon,
+.email-icon ion-icon {
+  width: 100%;
+  height: 100%;
+}
+
+.contact-us--item:nth-child(2) {
+  margin-left: 2rem;
+}
+
+.logo-link {
+  cursor: pointer;
+  width: 12rem;
+  height: 6rem;
+}
+
+.navigation {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.list {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.list--item {
+  display: block;
+  transition: all 0.2s;
+  padding: 0.8rem;
+  border-bottom: 2px solid transparent;
+}
+
+.list--item:hover,
+.list--item:active {
+  border-bottom: 2px solid #ffc309;
+  color: #ffc309;
+}
+
+.button {
+  font-size: 1.6rem;
+  font-weight: 400;
+  cursor: pointer;
+  background-color: #ffc309;
+  padding: 1.6rem 3.2rem;
+  border-radius: 2px;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  color: #fff;
+  transition: all 0.3s;
+}
+
+.button:hover,
+.button:active {
+  background-color: #fff;
+  box-shadow: inset 0 0 0 3px #ffc309;
+  color: #ffc309;
+}
+

@@ -1,0 +1,36 @@
+.accordion-wrapper {
+  max-width: 40rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 1rem 0m;
+  border-bottom: 1px solid #d3d3d3;
+  transform: all 200ms;
+}
+
+.heading-wrapper {
+  cursor: pointer;
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: space-between;
+}
+
+.heading-wrapper svg {
+  height: 4rem;
+  width: 4rem;
+  transition: transform 200ms;
+}
+
+.accordion--decription-wrapper {
+  grid-column: -3 / -1;
+  transition: max-height 200ms ease-out;
+  max-height: 0;
+  overflow: hidden;
+}
+
+.accordion--active {
+  max-height: 100%;
+}
+
+.rotate-svg {
+  transform: rotate(-180deg);
+}
