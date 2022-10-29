@@ -59,18 +59,22 @@ if you chose different ones you will just need to replace username and password 
 ```
 
 ### Run the following commands to add the index and mapping
-Linux/Mac
+
+### Linux/Mac
+```
 curl -X PUT http://localhost:9200/mapping_practice/ /
 --header "Content-Type: application/json" /
 --user elastic:123456 /
 -d @mapping.json
+```
 
-
+### Windows
+```
 curl -X PUT http://localhost:9200/mapping_practice/ ^
 --header "Content-Type: application/json" ^
 --user elastic:123456 ^
 -d @mapping.json
-
+```
 ### To index jobs you can you the following curl commands (Make sure you create a json file (named job.json in my case) containing the job data before you run the request)
 
 This is an example of how the json file should look.
