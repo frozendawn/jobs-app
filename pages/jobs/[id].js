@@ -5,7 +5,6 @@ import TypePin from "../../public/type-pin.svg";
 import CategoryPin from "../../public/category-pin.svg";
 
 const jobDetails = ({ jobData }) => {
-  console.log("prop jobData: ", jobData);
   return (
     <div className={styles["container"]}>
       <p className={styles["heading"]}>{jobData.title}</p>
@@ -63,7 +62,6 @@ const jobDetails = ({ jobData }) => {
 
 export async function getServerSideProps(context) {
   const id = context?.params?.id;
-  console.log("id: ", id);
   const elasticResponse = await fetch(`http://localhost:9200/mapping_practice/_doc/${id}`, {
     method: "GET",
     headers: {
