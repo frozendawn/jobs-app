@@ -20,9 +20,9 @@
 For cluster username and password I chose "username: elastic" "password: 123456"
 if you chose different ones you will just need to replace username and password with your own when you run the requests down below.
 
-### First you will need to create the mapping for index
+### First you will need to create a mapping for the index which will store the jobs.
 
-### Create a json file containing the mapping
+### Create a json file named "mapping.json" containing the mapping
 ```
 {
   "mappings": {
@@ -75,7 +75,7 @@ curl -X PUT http://localhost:9200/mapping_practice/ ^
 --user elastic:123456 ^
 -d @mapping.json
 ```
-### To index jobs you can you the following curl commands (Make sure you create a json file (named job.json in my case) containing the job data before you run the request)
+### To index jobs you can run the following curl commands (Make sure you create a json file (named job.json in my case) containing the job data before you run the request)
 
 This is an example of how the json file should look.
 ```
